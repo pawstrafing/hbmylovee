@@ -86,25 +86,87 @@
                         </div>
                     </div>
 
-                    <!-- PAGE 5: GRATITUDE -->
-                    <div class="page page-5">
-                        <div class="page-content">
-                            <h2>Спасибо тебе...</h2>
-                            <p class="main-text">…за то, что ты есть. За каждое твое сообщение, даже самое глупое и смешное, за те моменты, когда мы словно рядом, несмотря на расстояние. Спасибо тебе за твою доброту, за терпение, за тепло, которое ты даришь через экран. За то, что веришь в меня, видишь во мне лучшее и делаешь меня сильнее и лучше.</p>
-                            <div class="photo-placeholder">
-                                <video id="photoVideo3" class="photo-video" autoplay muted preload="auto">
-                                    <source src="photos/video3.mp4" type="video/mp4">
-                                    <source src="photos/video3.webm" type="video/webm">
-                                    Ваш браузер не поддерживает видео.
-                                </video>
-                                <div class="video-loading" id="videoLoading3" style="display: none;">
-                                    <div class="loading-spinner"></div>
-                                    <span>Загрузка видео...</span>
-                                </div>
-                                <span class="photo-text" id="photoText3" style="display:none;">Видео не найдено</span>
-                            </div>
-                        </div>
-                    </div>
+<!-- PAGE 5: GRATITUDE -->
+<div class="page page-5">
+    <div class="page-content">
+        <h2>Спасибо тебе...</h2>
+        <p class="main-text">
+            …за то, что ты есть. За каждое твое сообщение, даже самое глупое и смешное, за те моменты, когда мы словно рядом, несмотря на расстояние. 
+            Спасибо тебе за твою доброту, за терпение, за тепло, которое ты даришь через экран. За то, что веришь в меня, видишь во мне лучшее и делаешь меня сильнее и лучше.
+        </p>
+        <div class="photo-placeholder">
+            <video id="photoVideo3" class="photo-video" autoplay muted loop poster="photos/photo3.jpg" preload="auto">
+                <source src="photos/video3.mp4" type="video/mp4">
+                <source src="photos/video3.webm" type="video/webm">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="video-loading" id="videoLoading3" style="display: none;">
+                <div class="loading-spinner"></div>
+                <span>Загрузка видео...</span>
+            </div>
+            <span class="photo-text" id="photoText3" style="display:none;">Видео не найден или не может быть воспроизведено</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// ====== PAGE 5 VIDEO HANDLER ======
+const video = document.getElementById('photoVideo3');
+const loading = document.getElementById('videoLoading3');
+const fallbackText = document.getElementById('photoText3');
+const placeholder = video.parentElement;
+
+// Показать индикатор загрузки
+video.onloadstart = () => {
+    if (loading) loading.style.display = 'flex';
+};
+
+// Видео готово к воспроизведению
+video.oncanplay = () => {
+    if (loading) loading.style.display = 'none';
+    placeholder.classList.add('filled');
+    if (fallbackText) fallbackText.style.display = 'none';
+};
+
+// Обработка прогресса загрузки (по желанию)
+video.onprogress = () => {
+    if (video.buffered.length > 0 && video.duration > 0) {
+        const percent = (video.buffered.end(0) / video.duration) * 100;
+        console.log('Video loaded:', percent.toFixed(1) + '%');
+    }
+};
+
+// Ошибка загрузки видео
+video.onerror = () => {
+    if (loading) loading.style.display = 'none';
+    placeholder.classList.remove('filled');
+    if (fallbackText) fallbackText.style.display = 'block';
+    // показать постер вместо видео
+    if (video.poster) {
+        video.style.display = 'none';
+        const posterImg = document.createElement('img');
+        posterImg.src = video.poster;
+        posterImg.className = 'photo-image';
+        posterImg.alt = 'Постер видео';
+        placeholder.insertBefore(posterImg, video);
+    }
+};
+
+// Попытка автозапуска (muted) — всегда срабатывает на GitHub Pages
+video.muted = true;
+video.play().catch(e => console.log('Autoplay blocked', e));
+
+// ====== OPTIONAL: управление видео при навигации по страницам ======
+function handlePage5Video(currentPage) {
+    if (currentPage === 4) { // индекс страницы 5
+        video.play().catch(e => console.log('Autoplay blocked', e));
+    } else {
+        video.pause();
+    }
+}
+
+// Используй handlePage5Video(currentPage) в функции updatePage()
+</script>
 
                     <!-- PAGE 6: FAVORITE SONG -->
                     <div class="page page-6">
