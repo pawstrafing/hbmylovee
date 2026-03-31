@@ -1,0 +1,85 @@
+/* ====================================
+   VARIABLES.CSS - Color & Base Values
+   ==================================== */
+
+:root {
+    /* Primary Colors */
+    --primary: #ff4d7d;
+    --primary-light: #ff6b9d;
+    --primary-dark: #e63a66;
+    
+    /* Secondary Colors */
+    --secondary: #ff8fa3;
+    --secondary-light: #ffb8cc;
+    
+    /* Accent Colors */
+    --accent: #ffd6e0;
+    --accent-light: #ffe8f0;
+    
+    /* Neutral Colors */
+    --light: #fff9fb;
+    --white: #ffffff;
+    --text-dark: #2a2a2a;
+    --text-light: #444444;
+    --text-muted: #888888;
+    --text-very-light: #999999;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    --gradient-soft: linear-gradient(135deg, rgba(255,77,125,0.1) 0%, rgba(255,141,163,0.1) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 12px 30px rgba(255, 77, 125, 0.3);
+    --shadow-lg: 0 25px 50px rgba(255, 77, 125, 0.15);
+    --shadow-xl: 0 0 1px rgba(255, 77, 125, 0.3);
+    
+    /* Border Radius */
+    --radius-sm: 15px;
+    --radius-md: 20px;
+    --radius-lg: 25px;
+    
+    /* Spacing */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 15px;
+    --space-lg: 20px;
+    --space-xl: 25px;
+    --space-2xl: 30px;
+    --space-3xl: 40px;
+    --space-4xl: 50px;
+    --space-5xl: 60px;
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-ui: 'Poppins', sans-serif;
+    
+    --font-size-xs: 0.85rem;
+    --font-size-sm: 0.95rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.15rem;
+    --font-size-xl: 1.2rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2.2rem;
+    --font-size-4xl: 3.5rem;
+    
+    /* Transitions */
+    --transition-smooth: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-ease: all 0.3s ease;
+    --transition-page: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Z-Index */
+    --z-bg: 0;
+    --z-content: 10;
+    --z-overlay: 2;
+    --z-fixed: 20;
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f5f5f5;
+        --text-light: #000000;
+    }
+}

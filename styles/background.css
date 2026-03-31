@@ -1,0 +1,104 @@
+/* ====================================
+   BACKGROUND.CSS - Background Effects
+   ==================================== */
+
+.bg-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: var(--z-bg);
+}
+
+/* Animated Blobs */
+.blob {
+    position: absolute;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+    animation: blobMove 8s ease-in-out infinite;
+}
+
+.blob1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.blob2 {
+    width: 250px;
+    height: 250px;
+    background: var(--secondary);
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.blob3 {
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    top: 50%;
+    right: 5%;
+    animation-delay: 4s;
+}
+
+/* Blob Animation */
+@keyframes blobMove {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -20px);
+    }
+    50% {
+        transform: translate(-10px, 20px);
+    }
+    75% {
+        transform: translate(10px, -10px);
+    }
+}
+
+/* Responsive Blobs */
+@media (max-width: 768px) {
+    .blob1 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .blob2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .blob3 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blob {
+        opacity: 0.05;
+    }
+
+    .blob1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .blob2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .blob3 {
+        width: 80px;
+        height: 80px;
+    }
+}

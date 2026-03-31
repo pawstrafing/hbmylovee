@@ -1,0 +1,80 @@
+/* ====================================
+   PAGES.CSS - Page Styles & Backgrounds
+   ==================================== */
+
+.page {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-5xl) var(--space-4xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    flex: 1;
+}
+
+/* Page Background Colors */
+.page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Page 1 - Cover */
+.page-1::before {
+    background: linear-gradient(135deg, #fff9fb 0%, #ffe8f0 100%);
+}
+
+/* Page 2 - Beginning */
+.page-2::before {
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+}
+
+/* Page 3 - Realization */
+.page-3::before {
+    background: linear-gradient(135deg, #fae8ed 0%, #f8d4e0 100%);
+}
+
+/* Page 4 - Main Confession */
+.page-4::before {
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff4d7d 100%);
+}
+
+/* Page 5 - Gratitude */
+.page-5::before {
+    background: linear-gradient(135deg, #ffd6e0 0%, #ffb8cc 100%);
+}
+
+/* Page 6 - Wishes */
+.page-6::before {
+    background: linear-gradient(135deg, #fff0f7 0%, #ffcce8 100%);
+}
+
+/* Responsive Pages */
+@media (max-width: 768px) {
+    .page {
+        padding: var(--space-4xl) var(--space-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: var(--space-4xl) var(--space-lg);
+    }
+}

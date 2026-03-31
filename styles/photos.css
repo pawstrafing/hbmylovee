@@ -1,0 +1,125 @@
+/* ====================================
+   PHOTOS.CSS - Photo Upload & Display
+   ==================================== */
+
+/* File Input */
+.file-input {
+    display: none;
+}
+
+/* Photo Placeholder */
+.photo-placeholder {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 77, 125, 0.1) 0%, rgba(255, 141, 163, 0.1) 100%);
+    border: 2px dashed var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-2xl) 0;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-ease);
+}
+
+/* Photo Image */
+.photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* Photo Video */
+.photo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    background: #000;
+}
+
+/* Filled State */
+.photo-placeholder.filled {
+    border: none;
+    background: none;
+}
+
+.photo-placeholder.filled::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 77, 125, 0.1) 0%, transparent 100%);
+    z-index: var(--z-overlay);
+    pointer-events: none;
+}
+
+/* Photo Text Placeholder */
+.photo-text {
+    font-size: var(--font-size-xs);
+    color: var(--primary);
+    font-weight: 500;
+    pointer-events: none;
+    font-family: var(--font-ui);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Responsive Photos */
+@media (max-width: 768px) {
+    .photo-placeholder {
+        width: 220px;
+        height: 220px;
+        border-radius: 15px;
+    }
+
+    .photo-placeholder.filled::before {
+        border-radius: 15px;
+    }
+
+    .photo-image {
+        border-radius: 15px;
+    }
+
+    .upload-overlay {
+        border-radius: 15px;
+    }
+
+    .photo-text {
+        font-size: 0.8rem;
+    }
+
+    .upload-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-placeholder {
+        width: 180px;
+        height: 180px;
+        margin: var(--space-xl) 0;
+    }
+
+    .photo-placeholder.filled::before {
+        border-radius: 12px;
+    }
+
+    .photo-image {
+        border-radius: 12px;
+    }
+
+    .upload-overlay {
+        border-radius: 12px;
+    }
+
+    .photo-text {
+        font-size: 0.75rem;
+    }
+
+    .upload-text {
+        font-size: 0.7rem;
+    }
+}

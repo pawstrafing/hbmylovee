@@ -1,0 +1,76 @@
+/* ====================================
+   BOOK.CSS - Main Book Container
+   ==================================== */
+
+.container {
+    position: relative;
+    z-index: var(--z-content);
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Book */
+.book {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: 
+        var(--shadow-lg),
+        var(--shadow-xl),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    min-height: 600px;
+    position: relative;
+    animation: slideUp 0.9s var(--transition-smooth);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Pages Wrapper */
+.pages-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.pages {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-page);
+}
+
+/* Responsive Book */
+@media (max-width: 768px) {
+    .book {
+        aspect-ratio: auto;
+        min-height: 700px;
+        border-radius: var(--radius-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+        min-height: 600px;
+        border-radius: var(--radius-sm);
+    }
+}

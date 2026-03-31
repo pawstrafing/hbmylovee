@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#ff4d7d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Моя Любимая 💕 С Днем Рождения!</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/book.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/photos.css">
+    <link rel="stylesheet" href="styles/decorations.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Book -->
+        <div class="book">
+            <div class="pages-wrapper">
+                <div class="pages" id="pagesContainer">
+                    
+                    <!-- PAGE 1: COVER -->
+                    <div class="page page-1">
+                        <div class="page-content">
+                            <p class="subtitle">💕 С Днем Рождения 💕</p>
+                            <h1>Моя дорогая зайка</h1>
+                            <div class="emoji-group">
+                                <span class="emoji-float">🌹</span>
+                                <span class="emoji-float">💝</span>
+                                <span class="emoji-float">✨</span>
+                            </div>
+                            <p class="tagline">С твоим днем моя любимая 💘</p>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 2: BEGINNING -->
+                    <div class="page page-2">
+                        <div class="page-content">
+                            <h2>Помню, как это было...</h2>
+                            <p class="main-text">Когда ты появилась в моей жизни, я не верил, что все у нас может стать на столько серьезным, мне трудно передать эмоции и ощущения, того, что я сейчас испытываю. Мне так тяжко без тебя, пока ты спишь, а я сижу на парах</p>
+                            <div class="photo-placeholder">
+                                <img id="photoImg1" class="photo-image" src="photos/photo1.jpg" alt="Фото вместе" onerror="this.style.display='none'; document.getElementById('photoText1').style.display='block';">
+                                <span class="photo-text" id="photoText1" style="display:none;">Фото не найдено</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 3: REALIZATION -->
+                    <div class="page page-3">
+                        <div class="page-content">
+                            <h2>Я начал понимать...</h2>
+                            <p class="main-text">...что ты не просто девушка, которую я случайно встретил. Ты та единственная и моя сладкая, которая сумела вмешаться в мой безмятежный мир и сделать его безумно ярче. Каждый день с тобой стал приключением, а наше время с тобой это настоящее счастье для меня.</p>
+                            <div class="photo-placeholder">
+                                <img id="photoImg2" class="photo-image" src="photos/photo2.jpg" alt="Фото момента" onerror="this.style.display='none'; document.getElementById('photoText2').style.display='block';">
+                                <span class="photo-text" id="photoText2" style="display:none;">Фото не найдено</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 4: MAIN CONFESSION -->
+                    <div class="page page-4">
+                        <div class="page-content">
+                            <h2>Теперь я знаю точно:</h2>
+                            <p class="confession-text">Я больше не представляю свой день без тебя. Не представляю просыпаться без твоих сообщений, заканчивать вечер без твоего присутствия рядом.</p>
+                            <p class="main-text">Ты стала центром моей души, моей самой большой любовью и моей самой счастливой мыслью. Стала тем человеком, о котором я думаю чаще всего. Моим теплом, моей радостью и самым дорогим чувством внутри меня.</p>
+                            <span class="decorative-heart">💕</span>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 5: GRATITUDE -->
+                    <div class="page page-5">
+                        <div class="page-content">
+                            <h2>Спасибо тебе...</h2>
+                            <p class="main-text">…за то, что ты есть. За каждое твое сообщение, даже самое глупое и смешное, за те моменты, когда мы словно рядом, несмотря на расстояние. Спасибо тебе за твою доброту, за терпение, за тепло, которое ты даришь через экран. За то, что веришь в меня, видишь во мне лучшее и делаешь меня сильнее и лучше.</p>
+                            <div class="photo-placeholder">
+                                <video id="photoVideo3" class="photo-video" autoplay muted loop>
+                                    <source src="photos/video3.mp4" type="video/mp4">
+                                    <source src="photos/video3.webm" type="video/webm">
+                                    Ваш браузер не поддерживает видео.
+                                </video>
+                                <span class="photo-text" id="photoText3" style="display:none;">Видео не найдено</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 6: FAVORITE SONG -->
+                    <div class="page page-6">
+                        <div class="page-content">
+                            <h2>Твоя любимая песня</h2>
+                            <p class="main-text">Я хочу, чтобы эта мелодия звучала для тебя всегда. Пусть каждая строчка песни делает тебя веселее и ближе ко мне)</p>
+                            <div class="audio-placeholder" style="margin-top: var(--space-lg);">
+                                <audio id="favoriteSong" class="song-audio" controls>
+                                    <source src="photos/сонх.mp3" type="audio/mpeg">
+                                    <source src="photos/song.ogg" type="audio/ogg">
+                                    Ваш браузер не поддерживает аудио.
+                                </audio>
+                                <span class="photo-text" id="songText" style="display:none;">Песня не найдена</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 7: WISHES -->
+                    <div class="page page-7">
+                        <div class="page-content">
+                            <h2>В этот день я желаю тебе...</h2>
+                            <p class="main-text">Чтобы каждый день был наполнен светом и радостью. Чтобы ты всегда чувствовала мою безграничную любовь. Чтобы все твои мечты сбывались, и ты шла к ним со мной без сомнений. Чтобы на твоём лице всегда была эта прекрасная улыбка.</p>
+                            <p class="final-love">Я люблю тебя, моя зайка <span class="decorative-heart-inline">💕</span></p>
+                            <p class="footer-text">Сегодня, завтра, всегда и везде 🌙</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-container">
+            <button class="nav-btn nav-btn-prev" id="prevBtn" onclick="prevPage()">← Назад</button>
+            <div class="page-indicator">
+                <span id="currentPage">1</span> / 7
+            </div>
+            <button class="nav-btn nav-btn-next" id="nextBtn" onclick="nextPage()">Вперед →</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

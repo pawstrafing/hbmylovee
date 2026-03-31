@@ -1,0 +1,135 @@
+/* ====================================
+   DECORATIONS.CSS - Animations & Effects
+   ==================================== */
+
+/* Decorative Heart */
+.decorative-heart {
+    font-size: 2.5rem;
+    display: inline-block;
+    animation: heartPulse 2.5s ease-in-out infinite;
+    margin: var(--space-lg) 0;
+}
+
+.decorative-heart-inline {
+    font-size: 2rem;
+    display: inline;
+    animation: heartPulse 2.5s ease-in-out infinite;
+    margin: 0 var(--space-sm);
+}
+
+/* Heart Pulse Animation */
+@keyframes heartPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Floating Emoji */
+.emoji-float {
+    font-size: 1.5rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    margin: 0 var(--space-xs);
+}
+
+.emoji-float:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.emoji-float:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Stagger Animation Delays */
+@keyframes staggerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 77, 125, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 77, 125, 0.5);
+    }
+}
+
+/* Page Load Cascade */
+.page-content h2 {
+    animation-delay: 0.15s;
+}
+
+.page-content .main-text {
+    animation-delay: 0.25s;
+}
+
+.page-content .photo-placeholder {
+    animation: fadeInUp 0.8s ease-out 0.35s both;
+}
+
+.page-content .confession-text {
+    animation-delay: 0.25s;
+}
+
+.page-content .final-love {
+    animation: fadeInUp 0.8s ease-out 0.35s both;
+}
+
+.page-content .footer-text {
+    animation: fadeInUp 0.8s ease-out 0.45s both;
+}
+
+.page-content .decorative-heart {
+    animation: heartPulse 2.5s ease-in-out infinite;
+}
+
+/* Responsive Decorations */
+@media (max-width: 768px) {
+    .emoji-float {
+        font-size: 1.3rem;
+    }
+
+    .decorative-heart {
+        font-size: 2rem;
+    }
+
+    .decorative-heart-inline {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .emoji-float {
+        font-size: 1.2rem;
+        margin: 0 var(--space-xs);
+    }
+
+    .decorative-heart {
+        font-size: 1.5rem;
+    }
+
+    .decorative-heart-inline {
+        font-size: 1.2rem;
+    }
+}
